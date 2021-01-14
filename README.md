@@ -1,10 +1,12 @@
 <!-- @format -->
 
+![Imagem Apresentação Projeto Dark](.github/Apresentacao.png)
+
 # Personagens da série Dark
 
 Acesse o projeto [aqui](https://vitorsemidio-dev.github.io/cards-personagens-dark/).
 
-Página simples html com informações de alguns personagens da famosa série **Dark** _disponível na Netflix_.
+Página simples html com informações de alguns personagens da famosa série **Dark** (_disponível na Netflix_).
 
 ## Resumo da série
 
