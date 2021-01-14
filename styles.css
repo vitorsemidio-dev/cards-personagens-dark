@@ -1,0 +1,180 @@
+/** @format */
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;1,300;1,400&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --jonas-kahnwald: #ff0;
+  --michael-kahnwald: #ff6a6a;
+  --hannah-kahnwald: #e0a788;
+  --ines-kahnwald: #eaeaea;
+  --martha-nielsen: #f1767e;
+  --katharina-nielsen: #a77249;
+  --aleksander-tiedemann: #5f98a2;
+  --charlotte-doppler: #efaa75;
+  --elisabeth-doppler: #d65e4c;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  min-height: 100vh;
+
+  background-image: url(./img/bg-dark.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  padding: 30px;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+
+  gap: 16px;
+}
+
+.jonas-kahnwald {
+  color: var(--jonas-kahnwald);
+}
+.michael-kahnwald {
+  color: var(--michael-kahnwald);
+}
+.hannah-kahnwald {
+  color: var(--hannah-kahnwald);
+}
+.ines-kahnwald {
+  color: var(--ines-kahnwald);
+}
+.martha-nielsen {
+  color: var(--martha-nielsen);
+}
+.katharina-nielsen {
+  color: var(--katharina-nielsen);
+}
+.aleksander-tiedemann {
+  color: var(--aleksander-tiedemann);
+}
+.charlotte-doppler {
+  color: var(--charlotte-doppler);
+}
+.elisabeth-doppler {
+  color: var(--elisabeth-doppler);
+}
+
+.card-container {
+  width: 100%;
+
+  padding: 32px;
+  border-radius: 20px;
+
+  display: flex;
+  justify-content: space-between;
+
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+
+  overflow: hidden;
+}
+
+.card-container img {
+  margin-left: 16px;
+  width: 140px;
+  object-fit: cover;
+  border-radius: 20px;
+
+  animation: avatarAnimation 2s ease;
+}
+
+.card-container .content {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-container .content p {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  filter: opacity(70%);
+  font-size: 16px;
+  animation: descriptionAnimation 1s ease-in;
+}
+
+.card-container .content h2 {
+  font-family: 'Fredoka One', cursive;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 30px;
+
+  letter-spacing: 4px;
+  margin-bottom: 12px;
+
+  animation: charAnimation 1s ease-in;
+}
+
+@keyframes avatarAnimation {
+  from {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes descriptionAnimation {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes charAnimation {
+  from {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .card-container .content h2 {
+    font-size: 20px;
+  }
+  .card-container .content p {
+    font-size: 12px;
+  }
+}
